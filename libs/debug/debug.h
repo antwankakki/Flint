@@ -1,7 +1,9 @@
 #ifndef _DEBUG_
 #define _DEBUG_
 
-#include <stdio.h>
+#include <stdio.h> //vprintf
+#include <stdarg.h> //va_list, va_start, va_end
+#include <stdlib.h>
 
 // Booleans
 #define TRUE  (0 == 0)
@@ -26,11 +28,6 @@
 #define ENTRY_POINT printf("Entered %s (%s: %d)\n", __FUNCTION__, __FILE__, __LINE__);
 #define EXIT_POINT printf("Exited %s (%s: %d)\n", __FUNCTION__, __FILE__, __LINE__);
 #define EXIT_POINT_WITH_RETURN(x) EXIT_POINT; return x;
-
-#include <stdio.h> //vprintf
-#include <stdarg.h> //va_list, va_start, va_end
-#include <stdlib.h>
-#include "debug.h"
 
 void debugPrint(int log_type, int flag, const char * format, ...)
 {
