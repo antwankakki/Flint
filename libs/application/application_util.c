@@ -40,7 +40,7 @@ int showInventory(const Application* application)
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
-int populateApplicationHandles(Application* application)
+int populateApplicationHandle(Application* application)
 {
     ENTRY_POINT;
     application->handle.showInventory = showInventory;
@@ -53,7 +53,7 @@ int populateApplication(Application* application)
     ENTRY_POINT;
     application-> id = 1;
     
-    if (kernelInit(&application->drone) && networkInit(&application->network) && populateApplicationHandles(application))
+    if (kernelInit(&application->drone) && networkInit(&application->network) && populateApplicationHandle(application))
     {
         application->status = APPLICATION_STATUS_READY;
     }
