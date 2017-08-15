@@ -1,4 +1,4 @@
-char* droneStatusMap(int status)
+const char* droneStatusMap(int status)
 {
     switch (status)
     {
@@ -13,6 +13,23 @@ char* droneStatusMap(int status)
         default:
             return (char*)"Unknown";
     }
+}
+
+char* rotorStatusMap(int status)
+{
+  switch (status)
+  {
+    case ROTOR_STATUS_NOT_PRESENT:
+      return (char*)"Not Present";
+    case ROTOR_STATUS_IDLE:
+      return (char*)"Idle";
+    case ROTOR_STATUS_RUNNING:
+      return (char*)"Running";
+    case ROTOR_STATUS_STANDBY:
+      return (char*)"Standby";
+    default:
+      return (char*)"Unknown";
+  }
 }
 
 int powerUp(Drone* drone)
@@ -74,6 +91,8 @@ int setDroneTilt(Drone* drone, float tilt)
 int populateDroneHandle(Drone* drone)
 {
     ENTRY_POINT;
+    drone->id = 1;
+    drone->status = DRONE_STATUS_IDLE;
     drone->handle.powerUp = powerUp;
     drone->handle.powerDown = powerDown;
     drone->handle.gracefulPowerDown = gracefulPowerDown;

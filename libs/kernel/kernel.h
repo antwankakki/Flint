@@ -9,6 +9,15 @@
 #define DRONE_STATUS_RUNNING         3
 #define DRONE_STATUS_STANDBY         4
 
+#define ROTOR_STATUS_NOT_PRESENT     1
+#define ROTOR_STATUS_IDLE            2
+#define ROTOR_STATUS_RUNNING         3
+#define ROTOR_STATUS_STANDBY         4
+
+#define CAMERA_STATUS_NOT_PRESENT     1
+#define CAMERA_STATUS_IDLE            2
+#define CAMERA_STATUS_RUNNING         3
+#define CAMERA_STATUS_STANDBY         4
 //TODO: add directions
 
 /// EOF Defines
@@ -51,6 +60,7 @@ typedef struct _CameraHandle {
 
 typedef struct _Camera {
     unsigned int id;
+    int status;
     int type;
     // TODO: Add more fields
     CameraHandle handle;

@@ -36,7 +36,23 @@ int showInventory(const Application* application)
         printf("        Type: %d\n", application->drone.batteries[i].type);
         printf("        Current Charge: %.2f\n", application->drone.batteries[i].charge);
     }
-    // TODO: show full inventory
+    printf("    Rotors:\n");
+    printf("      Rotor Count: %d\n", application->drone.rotor_count);
+    for (unsigned int i = 0; i < application->drone.rotor_count; i++)
+    {
+      printf("      Rotor #%d:\n", i);
+      printf("        ID: %d\n", application->drone.rotors[i].id);
+      printf("        Status: %s\n", rotorStatusMap(application->drone.rotors[i].status));
+    }
+    printf("    Cameras:\n");
+    printf("      Camera Count: %d\n", application->drone.camera_count);
+    for (unsigned int i = 0; i < application->drone.camera_count; i++)
+    {
+      printf("    Camera #%d:\n", i);
+      printf("      ID: %d\n", application->drone.cameras[i].id);
+      printf("      Status: %d\n", application->drone.cameras[i].status);
+      printf("      Type: %d\n", application->drone.cameras[i].type);
+    }
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -52,7 +68,7 @@ int populateApplication(Application* application)
 {
     ENTRY_POINT;
     application-> id = 1;
-    
+
     if (kernelInit(&application->drone) && networkInit(&application->network) && populateApplicationHandle(application))
     {
         application->status = APPLICATION_STATUS_READY;
