@@ -2,6 +2,8 @@ const char* kernelStatusMap(Status status)
 {
   switch (status)
   {
+    case BROKEN:
+        return "Broken";
     case FAILED:
       return "Failed";
     case PRESENT:
