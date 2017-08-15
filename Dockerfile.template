@@ -13,4 +13,4 @@ WORKDIR /usr/src/app
 
 RUN make release
 
-RUN make run
+CMD make run
