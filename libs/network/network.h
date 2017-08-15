@@ -15,6 +15,7 @@ typedef struct _NetworkHandle {
 typedef struct _Network {
     int id;
     int status;
+    int type;
     NetworkHandle handle;
 } Network;
 

@@ -21,7 +21,7 @@ int showInventory(const Application* application)
     printf("  Status: %s\n", applicationStatusMap(application->status));
     printf("  Drone:\n");
     printf("    ID: %d\n", application->drone.id);
-    printf("    Status: %s\n", droneStatusMap(application->drone.status));
+    printf("    Status: %s\n", kernelStatusMap(application->drone.status));
     printf("    Speed: %.3f\n", application->drone.speed);
     printf("    Height: %.3f\n", application->drone.height);
     printf("    Direction: %d\n", application->drone.direction);
@@ -32,7 +32,7 @@ int showInventory(const Application* application)
     {
         printf("      Battery #%d:\n", i);
         printf("        ID: %d\n", application->drone.batteries[i].id);
-        printf("        Status: %d\n", application->drone.batteries[i].status);
+        printf("        Status: %s\n", kernelStatusMap(application->drone.batteries[i].status));
         printf("        Type: %d\n", application->drone.batteries[i].type);
         printf("        Current Charge: %.2f\n", application->drone.batteries[i].charge);
     }
@@ -42,7 +42,7 @@ int showInventory(const Application* application)
     {
       printf("      Rotor #%d:\n", i);
       printf("        ID: %d\n", application->drone.rotors[i].id);
-      printf("        Status: %s\n", rotorStatusMap(application->drone.rotors[i].status));
+      printf("        Status: %s\n", kernelStatusMap(application->drone.rotors[i].status));
     }
     printf("    Cameras:\n");
     printf("      Camera Count: %d\n", application->drone.camera_count);

@@ -1,34 +1,18 @@
-const char* droneStatusMap(int status)
-{
-    switch (status)
-    {
-        case DRONE_STATUS_NOT_PRESENT:
-            return (char*)"Not Present";
-        case DRONE_STATUS_IDLE:
-            return (char*)"Idle";
-        case DRONE_STATUS_RUNNING:
-            return (char*)"Running";
-        case DRONE_STATUS_STANDBY:
-            return (char*)"Standby";
-        default:
-            return (char*)"Unknown";
-    }
-}
-
-char* rotorStatusMap(int status)
+const char* kernelStatusMap(Status status)
 {
   switch (status)
   {
-    case ROTOR_STATUS_NOT_PRESENT:
-      return (char*)"Not Present";
-    case ROTOR_STATUS_IDLE:
-      return (char*)"Idle";
-    case ROTOR_STATUS_RUNNING:
-      return (char*)"Running";
-    case ROTOR_STATUS_STANDBY:
-      return (char*)"Standby";
+    case FAILED:
+      return "Failed";
+    case PRESENT:
+      return "Present";
+    case RUNNING:
+      return "Running";
+    case IDLE:
+      return "Idle";
+    case UNKNOWN:
     default:
-      return (char*)"Unknown";
+      return "Unknown";
   }
 }
 
@@ -92,7 +76,7 @@ int populateDroneHandle(Drone* drone)
 {
     ENTRY_POINT;
     drone->id = 1;
-    drone->status = DRONE_STATUS_IDLE;
+    drone->status = Status::PRESENT;
     drone->handle.powerUp = powerUp;
     drone->handle.powerDown = powerDown;
     drone->handle.gracefulPowerDown = gracefulPowerDown;

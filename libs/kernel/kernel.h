@@ -3,24 +3,17 @@
 
 #include "../debug/debug.h"
 
-/// Defines
-#define DRONE_STATUS_NOT_PRESENT     1
-#define DRONE_STATUS_IDLE            2
-#define DRONE_STATUS_RUNNING         3
-#define DRONE_STATUS_STANDBY         4
+typedef enum {
+  UNKNOWN = 1,
+  FAILED,
+  PRESENT,
+  RUNNING,
+  IDLE
+} Status;
 
-#define ROTOR_STATUS_NOT_PRESENT     1
-#define ROTOR_STATUS_IDLE            2
-#define ROTOR_STATUS_RUNNING         3
-#define ROTOR_STATUS_STANDBY         4
-
-#define CAMERA_STATUS_NOT_PRESENT     1
-#define CAMERA_STATUS_IDLE            2
-#define CAMERA_STATUS_RUNNING         3
-#define CAMERA_STATUS_STANDBY         4
-//TODO: add directions
-
-/// EOF Defines
+typedef enum {
+  LiPo = 1
+} BatteryType;
 
 struct _Battery;
 typedef struct _BatteryHandle {
@@ -31,8 +24,8 @@ typedef struct _BatteryHandle {
 
 typedef struct _Battery {
     unsigned int id;
-    int status;
-    int type;
+    Status status;
+    BatteryType type;
     float charge;
 } Battery;
 
@@ -46,7 +39,7 @@ typedef struct _RotorHandle {
 
 typedef struct _Rotor {
     unsigned int id;
-    int status;
+    Status status;
     int thrust;
     RotorHandle handle;
 } Rotor;
@@ -60,7 +53,7 @@ typedef struct _CameraHandle {
 
 typedef struct _Camera {
     unsigned int id;
-    int status;
+    Status status;
     int type;
     // TODO: Add more fields
     CameraHandle handle;
@@ -82,7 +75,7 @@ typedef struct _DroneHandle {
 
 typedef struct _Drone {
     unsigned int id;
-    int status;
+    Status status;
     float speed;
     float height;
     int direction;
