@@ -96,6 +96,7 @@ int populateDrone(Drone* drone)
     if (!populateDroneHandle(drone))
     {
         debugPrint(FATAL, __DEBUG__ || __RELEASE__, "Failed to populate drone handle");
+        EXIT_POINT_WITH_RETURN(FALSE);
     }
     // TODO: finish
     EXIT_POINT_WITH_RETURN(TRUE);
