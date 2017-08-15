@@ -6,7 +6,7 @@ int main() {
     Application application;
     if (!applicationInit(&application))
     {
-        debugPrint(FATAL, TRUE, "Failed to populate application\n");
+        debugPrint(FATAL, TRUE, "Failed to populate application");
         EXIT_POINT_WITH_RETURN(FALSE);
     }
     
