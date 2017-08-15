@@ -4,7 +4,7 @@
 #include "../debug/debug.h"
 
 typedef enum {
-  UNKNOWN = 1,
+  MISSING = 1,
   BROKEN,
   FAILED,
   PRESENT,
