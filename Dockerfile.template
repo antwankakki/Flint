@@ -1,0 +1,16 @@
+FROM resin/%%RESIN_MACHINE_NAME%%-debian
+
+#switch on systemd init system in container
+ENV INITSYSTEM on
+
+RUN apt-get -q update
+RUN apt-get install -yq --no-install-recommends build-essential
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
+
+COPY . /usr/src/app
+WORKDIR /usr/src/app
+
+RUN make release
+
+RUN make run

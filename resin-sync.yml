@@ -1,0 +1,4 @@
+before: 'make release'
+ignore:
+    - .git
+progress: true
