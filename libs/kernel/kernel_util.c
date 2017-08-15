@@ -2,6 +2,8 @@ const char* kernelStatusMap(Status status)
 {
   switch (status)
   {
+    case MISSING:
+        return "Missing";
     case BROKEN:
         return "Broken";
     case FAILED:
@@ -12,7 +14,6 @@ const char* kernelStatusMap(Status status)
       return "Running";
     case IDLE:
       return "Idle";
-    case UNKNOWN:
     default:
       return "Unknown";
   }
