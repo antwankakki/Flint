@@ -5,6 +5,7 @@
 
 typedef enum {
   UNKNOWN = 1,
+  BROKEN,
   FAILED,
   PRESENT,
   RUNNING,
