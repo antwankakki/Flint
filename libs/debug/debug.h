@@ -10,11 +10,6 @@
 #define FALSE (0 == 1)
 
 // Log Types
-//#define FATAL 0
-//#define ERROR 1
-//#define WARN  2
-//#define PASS  3
-//#define INFO  4
 typedef enum {
     FATAL = 0,
     ERROR,
@@ -36,7 +31,7 @@ typedef enum {
 #define EXIT_POINT printf("Exited %s (%s: %d)\n", __FUNCTION__, __FILE__, __LINE__);
 #define EXIT_POINT_WITH_RETURN(x) EXIT_POINT; return x;
 
-void debugPrint(int log_type, int flag, const char * format, ...)
+void debugPrint(LogType log_type, int flag, const char * format, ...)
 {
     if (flag)
     {
