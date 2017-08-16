@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Alkass/Flint.svg?token=5HdMqhthhyUjijBZQvCS&branch=master)](https://travis-ci.com/Alkass/Flint)
+
 # Flint
 Flint is a drone firmware designed with hackability and extensibility in mind.
 
