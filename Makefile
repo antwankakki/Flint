@@ -1,12 +1,22 @@
 CC=g++
-ARGS=-std=c++11 -Wall -Werror
-ENTRY_FILE_PATH=./main.cpp
+CHECKS=-Wall \
+	-Werror \
+	-Wclobbered \
+	-Wempty-body \
+	-Wignored-qualifiers \
+	-Wmissing-field-initializers \
+	-Wtype-limits \
+	-Wuninitialized \
+	-Wunused-parameter \
+	-Wunused-but-set-parameter
+ARGS=-std=c++11 $(CHECKS)
+ENTRY_POINT_PATH=./main.cpp
 
 debug:
-	$(CC) $(ARGS) -g -DDEBUG $(ENTRY_FILE_PATH) -o debug.exe
+	$(CC) $(ARGS) -g -DDEBUG $(ENTRY_POINT_PATH) -o debug.exe
 
 release:
-	$(CC) $(ARGS) -DRELEASE $(ENTRY_FILE_PATH) -o release.exe
+	$(CC) $(ARGS) -DRELEASE $(ENTRY_POINT_PATH) -o release.exe
 
 run:
 	./`ls -t *.exe | head -n 1 | awk '{print $1}'`
