@@ -16,7 +16,7 @@ configure:
 	sudo ./configure.sh
 
 analyze:
-	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes --track-origins=yes ./debug.exe
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes --track-origins=yes -v ./debug.exe
 
 clean:
 	rm -f *.exe
