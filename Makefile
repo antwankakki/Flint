@@ -1,5 +1,6 @@
 CC=g++
-CC_CHECKS=-Wall \
+CC_CHECKS= \
+	-Wall \
 	-Werror \
 	-Wclobbered \
 	-Wempty-body \
@@ -10,11 +11,20 @@ CC_CHECKS=-Wall \
 	-Wunused-parameter \
 	-Wunused-but-set-parameter
 CC_FEATURE_SET=-std=c++11
-CC_ARGS=$(CC_CHECKS) $(CC_FEATURE_SET)
+CC_ARGS= \
+	$(CC_CHECKS) \
+	$(CC_FEATURE_SET)
 CC_ENTRY_POINT_PATH=./main.cpp
 
 SC_ANALYZER=valgrind
-SC_CHECKS=--tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes --track-origins=yes -v
+SC_CHECKS= \
+	--tool=memcheck \
+	--leak-check=yes \
+	--show-reachable=yes \
+	--num-callers=20 \
+	--track-fds=yes \
+	--track-origins=yes \
+	-v
 SC_ARGS=$(SC_CHECKS)
 SC_ENTRY_POINT_PATH=./debug.exe
 
