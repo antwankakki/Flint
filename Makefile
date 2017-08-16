@@ -1,6 +1,6 @@
 CC=g++
 ARGS=-std=c++11 -Wall -Werror
-ENTRY_FILE_PATH=./main.c
+ENTRY_FILE_PATH=./main.cpp
 
 debug:
 	$(CC) $(ARGS) -g -DDEBUG $(ENTRY_FILE_PATH) -o debug.exe
