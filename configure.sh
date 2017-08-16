@@ -1,2 +1,2 @@
-apt-get update -y
-apt-get install -y valgrind
+apt-get update -yq
+apt-get install -yq valgrind
