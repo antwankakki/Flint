@@ -11,7 +11,14 @@ We realize that the drone market is still living its infancy days, which means t
 There you have the story. Interested? Consider contributing. The project is fairly new and we're sure we can squeeze you in somewhere and suck the life out of you. Just make sure you conform to our coding standards <b>which are yet to be added</b>, and you're good to go.
 
 # Getting Started
-TO BE ADDED
+## Deploying to your Pi
+### TO BE ADDED
+
+## Building the Source Code
+### TO BE ADDED
+
+## Contributing
+### TO BE ADDED
 
 # Author
 [Fadi Hanna Al-Kass](https://github.com/alkass)
