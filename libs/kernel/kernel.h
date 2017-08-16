@@ -58,14 +58,15 @@ struct _Camera;
 typedef struct _CameraHandle {
     Status status;
     int (*capture)(_Camera* camera);
-    // TODO: add more fields
+    int (*startLiveStream)(_Camera* camera);
+    int (*endLiveStream)(_Camera* camera);
 } CameraHandle;
 
 typedef struct _Camera {
     unsigned int id;
     Status status;
     CameraType type;
-    // TODO: Add more fields
+    float tilt;
     CameraHandle handle;
 } Camera;
 
