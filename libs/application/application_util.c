@@ -52,6 +52,7 @@ int showInventory(const Application* application)
       printf("      ID: %d\n", application->drone.cameras[i].id);
       printf("      Status: %d\n", application->drone.cameras[i].status);
       printf("      Type: %d\n", application->drone.cameras[i].type);
+      printf("      Tilt: %.3f\n", application->drone.cameras[i].tilt);
     }
     EXIT_POINT_WITH_RETURN(TRUE);
 }
