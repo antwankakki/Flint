@@ -1,0 +1,9 @@
+sudo: required
+before_install:
+  - make configure
+language: cpp
+compiler:
+  - g++
+script:
+  - make debug
+  - make analyze
