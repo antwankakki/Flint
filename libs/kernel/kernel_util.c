@@ -22,56 +22,60 @@ const char* kernelStatusMap(Status status)
 int powerUp(Drone* drone)
 {
     ENTRY_POINT;
-    // TODO: add
+    UNUSED(drone);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
 int powerDown(Drone* drone)
 {
     ENTRY_POINT;
-    // TODO: add
+    UNUSED(drone);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
 int gracefulPowerDown(Drone* drone)
 {
     ENTRY_POINT;
-    // TODO: add
+    UNUSED(drone);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
 int reboot(Drone* drone)
 {
     ENTRY_POINT;
-    // TODO: add
+    UNUSED(drone);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
 int setDroneSpeed(Drone* drone, float speed)
 {
     ENTRY_POINT;
-    // TODO: add
+    UNUSED(drone);
+    UNUSED(speed);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
 int setDroneHeight(Drone* drone, float height)
 {
     ENTRY_POINT;
-    // TODO: add
+    UNUSED(drone);
+    UNUSED(height);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
 int setDroneDirection(Drone *drone, int direction)
 {
     ENTRY_POINT;
-    // TODO: add
+    UNUSED(drone);
+    UNUSED(direction);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
 int setDroneTilt(Drone* drone, float tilt)
 {
     ENTRY_POINT;
-    // TODO: add
+    UNUSED(drone);
+    UNUSED(tilt);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -79,7 +83,7 @@ int populateDroneHandle(Drone* drone)
 {
     ENTRY_POINT;
     drone->id = 1;
-    drone->status = Status::PRESENT;
+    drone->status = PRESENT;
     drone->handle.powerUp = powerUp;
     drone->handle.powerDown = powerDown;
     drone->handle.gracefulPowerDown = gracefulPowerDown;

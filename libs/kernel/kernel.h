@@ -2,6 +2,7 @@
 #define _KERNEL_
 
 #include "../debug/debug.h"
+#include "defines.h"
 
 typedef enum {
   MISSING = 1,
@@ -16,9 +17,13 @@ typedef enum {
   LiPo = 1
 } BatteryType;
 
+typedef enum {
+  // TODO: ADD
+} CameraType;
+
 struct _Battery;
 typedef struct _BatteryHandle {
-    unsigned int status;
+    Status status;
     int (*populateBattery)(_Battery* battery);
     int (*loadCharge)(_Battery* battery);
 } BatteryHandle;
@@ -32,7 +37,7 @@ typedef struct _Battery {
 
 struct _Rotor;
 typedef struct _RotorHandle {
-    int status;
+    Status status;
     int (*populateRotor)(_Rotor* rotor);
     int (*populateThrust)(_Rotor* rotor);
     int (*setThrust)(_Rotor* rotor, float thrust);
@@ -47,7 +52,7 @@ typedef struct _Rotor {
 
 struct _Camera;
 typedef struct _CameraHandle {
-    int status;
+    Status status;
     int (*capture)(_Camera* camera);
     // TODO: add more fields
 } CameraHandle;
@@ -55,14 +60,14 @@ typedef struct _CameraHandle {
 typedef struct _Camera {
     unsigned int id;
     Status status;
-    int type;
+    CameraType type;
     // TODO: Add more fields
     CameraHandle handle;
 } Camera;
 
 struct _Drone;
 typedef struct _DroneHandle {
-    int status;
+    Status status;
     int (*populateDrone)(_Drone* drone);
     int (*powerUp)(_Drone* drone);
     int (*powerDown)(_Drone* drone);
