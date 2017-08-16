@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Valgrind Related Files and Directories
+*.dSYM
