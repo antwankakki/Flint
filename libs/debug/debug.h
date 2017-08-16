@@ -9,15 +9,6 @@
 #define TRUE  (0 == 0)
 #define FALSE (0 == 1)
 
-// Log Types
-typedef enum {
-    FATAL = 0,
-    ERROR,
-    WARN,
-    PASS,
-    INFO
-} LogType;
-
 #ifdef DEBUG
     #define __DEBUG__ TRUE
     #define __RELEASE__ FALSE
@@ -27,9 +18,14 @@ typedef enum {
     #define __RELEASE__ TRUE
 #endif
 
-#define ENTRY_POINT printf("Entered %s (%s: %d)\n", __FUNCTION__, __FILE__, __LINE__);
-#define EXIT_POINT printf("Exited %s (%s: %d)\n", __FUNCTION__, __FILE__, __LINE__);
-#define EXIT_POINT_WITH_RETURN(x) EXIT_POINT; return x;
+// Log Types
+typedef enum {
+    FATAL = 0,
+    ERROR,
+    WARN,
+    PASS,
+    INFO
+} LogType;
 
 void debugPrint(LogType log_type, int flag, const char * format, ...)
 {
@@ -62,5 +58,9 @@ void debugPrint(LogType log_type, int flag, const char * format, ...)
         printf("\n");
     }
 }
+
+#define ENTRY_POINT debugPrint(INFO, __DEBUG__ || __RELEASE__, "Entered %s (%s: %d)\n", __FUNCTION__, __FILE__, __LINE__);
+#define EXIT_POINT debugPrint(INFO, __DEBUG__ || __RELEASE__, "Exited %s (%s: %d)\n", __FUNCTION__, __FILE__, __LINE__);
+#define EXIT_POINT_WITH_RETURN(x) EXIT_POINT; return x;
 
 #endif
