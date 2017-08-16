@@ -10,11 +10,18 @@
 #define FALSE (0 == 1)
 
 // Log Types
-#define FATAL 0
-#define ERROR 1
-#define WARN  2
-#define PASS  3
-#define INFO  4
+//#define FATAL 0
+//#define ERROR 1
+//#define WARN  2
+//#define PASS  3
+//#define INFO  4
+typedef enum {
+    FATAL = 0,
+    ERROR,
+    WARN,
+    PASS,
+    INFO
+} LogType;
 
 #ifdef DEBUG
     #define __DEBUG__ TRUE
