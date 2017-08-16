@@ -18,7 +18,11 @@ typedef enum {
 } BatteryType;
 
 typedef enum {
-  // TODO: ADD
+  STANDARD = 1,
+  WIDE_ANGLE,
+  SHORT_TELEPHOTO,
+  MEDIUM_TELEPHOTO,
+  SUPER_TELEPHOTO
 } CameraType;
 
 struct _Battery;
