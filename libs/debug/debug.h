@@ -17,6 +17,13 @@
     #define __DEBUG__ FALSE
     #define __RELEASE__ TRUE
 #endif
+#ifndef DEBUG
+  #ifndef RELEASE
+    // if compiled with neither -DDEBUG nor -DRELEASE
+    #define __DEBUG__ FALSE
+    #define __RELEASE__ FALSE
+  #endif
+#endif
 
 // Log Types
 typedef enum {
