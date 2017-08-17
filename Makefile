@@ -39,7 +39,7 @@ run:
 
 configure:
 	chmod +x configure.sh
-	./configure.sh
+	sudo ./configure.sh
 
 analyze:
 	$(SC_ANALYZER) $(SC_ARGS) $(SC_ENTRY_POINT_PATH)

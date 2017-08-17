@@ -3,7 +3,8 @@ FROM resin/%%RESIN_MACHINE_NAME%%-debian
 #switch on systemd init system in container
 ENV INITSYSTEM on
 
-RUN make configure
+RUN chmod +x configure.sh
+RUN ./configure.sh
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
