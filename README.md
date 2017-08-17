@@ -15,7 +15,13 @@ There you have the story. Interested? Consider contributing. The project is fair
 ### TO BE ADDED
 
 ## Building the Source Code
-### TO BE ADDED
+```shell
+  vagrant up # only once per repo check out
+  vagrant provision # install all that's necessary for the build to succeed
+  vagrant ssh
+  make # build a debug version of the code
+  make run # or make analyze to run the build against Valgrind for memory leak checks
+```
 
 ## Contributing
 Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PR that breaks the build won't get approved.
