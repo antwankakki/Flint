@@ -12,11 +12,20 @@ There you have the story. Interested? Consider contributing. The project is fair
 
 # Getting Started
 ## Deploying to the Pi
-### TO BE ADDED
+1. Create an application on [resin.io](https://resin.io) and download RESINOS to your board. Instructions are available [here](https://docs.resin.io/raspberrypi3/cpp/getting-started/) if you've never done this before.
+2. Check out this repository:
+```shell
+  git clone https://github.com/alkass/Flint.git && cd Flint
+```
+3. Add the application's Git remote endpoint to the checkout out repo:
+```shell
+  git remote add resin <username>@git.resin.io:<username>/<app name>.git
+```
+That's it. You should now be able to see a 'Downloading' progress bar under your application.
 
 ## Building the Source Code
 ```shell
-  vagrant up # only once per repo check out
+  vagrant up # only once per repository check out
   vagrant provision # install all that's necessary for the build to succeed
   vagrant ssh
   make # build a debug version of the code
