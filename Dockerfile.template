@@ -4,11 +4,11 @@ FROM resin/%%RESIN_MACHINE_NAME%%-debian
 ENV INITSYSTEM on
 
 RUN apt-get -yq update
-RUN apt-get install -yq --no-install-recommends build-essential
+RUN apt-get install -yq --no-install-recommends \
+  build-essential \
+  valgrind
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
-
-RUN make configure
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app

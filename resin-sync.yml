@@ -1,4 +1,4 @@
-before: 'make release'
+before: 'make release && make run'
 ignore:
     - .git
 progress: true
