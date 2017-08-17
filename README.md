@@ -18,7 +18,7 @@ There you have the story. Interested? Consider contributing. The project is fair
 ### TO BE ADDED
 
 ## Contributing
-### TO BE ADDED
+Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PR that breaks the build won't get approved.
 
 # Author
 [Fadi Hanna Al-Kass](https://github.com/alkass)
