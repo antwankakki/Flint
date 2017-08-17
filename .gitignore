@@ -33,3 +33,6 @@
 
 # Valgrind Related Files and Directories
 *.dSYM
+
+# Vagrant related Files and Directories
+.vagrant
