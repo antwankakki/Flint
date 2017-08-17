@@ -17,7 +17,7 @@ There you have the story. Interested? Consider contributing. The project is fair
 ```shell
   git clone https://github.com/alkass/Flint.git && cd Flint
 ```
-3. Add the application's Git remote endpoint to the checkout out repo:
+3. Add the application's Git remote endpoint to the repo:
 ```shell
   git remote add resin <username>@git.resin.io:<username>/<app name>.git
 ```
