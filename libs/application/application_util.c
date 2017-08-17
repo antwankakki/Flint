@@ -1,27 +1,12 @@
-char* applicationStatusMap(int status)
-{
-    switch (status)
-    {
-        case APPLICATION_STATUS_DOWN:
-            return (char*)"Down";
-        case APPLICATION_STATUS_IDLE:
-            return (char*)"Idle";
-        case APPLICATION_STATUS_READY:
-            return (char*)"Ready";
-        default:
-            return (char*)"Unknown";
-    }
-}
-
 int showInventory(const Application* application)
 {
     ENTRY_POINT;
     printf("Application:\n");
     printf("  ID: %d\n", application->id);
-    printf("  Status: %s\n", applicationStatusMap(application->status));
+    printf("  Status: %s\n", statusMap(application->status));
     printf("  Drone:\n");
     printf("    ID: %d\n", application->drone.id);
-    printf("    Status: %s\n", kernelStatusMap(application->drone.status));
+    printf("    Status: %s\n", statusMap(application->drone.status));
     printf("    Speed: %.3f\n", application->drone.speed);
     printf("    Height: %.3f\n", application->drone.height);
     printf("    Direction: %d\n", application->drone.direction);
@@ -32,7 +17,7 @@ int showInventory(const Application* application)
     {
         printf("      Battery #%d:\n", i);
         printf("        ID: %d\n", application->drone.batteries[i].id);
-        printf("        Status: %s\n", kernelStatusMap(application->drone.batteries[i].status));
+        printf("        Status: %s\n", statusMap(application->drone.batteries[i].status));
         printf("        Type: %d\n", application->drone.batteries[i].type);
         printf("        Current Charge: %.2f\n", application->drone.batteries[i].charge);
     }
@@ -42,7 +27,7 @@ int showInventory(const Application* application)
     {
       printf("      Rotor #%d:\n", i);
       printf("        ID: %d\n", application->drone.rotors[i].id);
-      printf("        Status: %s\n", kernelStatusMap(application->drone.rotors[i].status));
+      printf("        Status: %s\n", statusMap(application->drone.rotors[i].status));
     }
     printf("    Cameras:\n");
     printf("      Camera Count: %d\n", application->drone.camera_count);
@@ -72,11 +57,11 @@ int populateApplication(Application* application)
 
     if (kernelInit(&application->drone) && networkInit(&application->network) && populateApplicationHandle(application))
     {
-        application->status = APPLICATION_STATUS_READY;
+        application->status = READY;
     }
     else
     {
-        application->status = APPLICATION_STATUS_DOWN;
+        application->status = DOWN;
         EXIT_POINT_WITH_RETURN(FALSE);
     }
     EXIT_POINT_WITH_RETURN(TRUE);

@@ -1,4 +1,4 @@
-const char* kernelStatusMap(Status status)
+const char* statusMap(Status status)
 {
   switch (status)
   {
@@ -14,6 +14,10 @@ const char* kernelStatusMap(Status status)
       return "Running";
     case IDLE:
       return "Idle";
+    case READY:
+      return "Ready";
+    case DOWN:
+      return "DOWN";
     default:
       return "Unknown";
   }

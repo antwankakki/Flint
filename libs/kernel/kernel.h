@@ -10,7 +10,9 @@ typedef enum {
   FAILED,
   PRESENT,
   RUNNING,
-  IDLE
+  IDLE,
+  READY,
+  DOWN
 } Status;
 
 typedef enum {
