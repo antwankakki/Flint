@@ -16,14 +16,6 @@ int main() {
     }
 
     // Test
-    //application.handle.showInventory(&application);
-
-    A* a = {0};
-
-    a = (A*)calloc(1, sizeof(A));
-
-    SAFE_FREE(a);
-    SAFE_FREE(a);
-
+    application.handle.showInventory(&application);
     EXIT_POINT_WITH_RETURN(0);
 }
