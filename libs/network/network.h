@@ -19,7 +19,7 @@ typedef struct {
 
 struct _Network;
 typedef struct _NetworkHandle {
-    int status;
+    Status status;
     void* instance;
     int (*populateNetwork)(_Network* network);
     int (*readBytes)(_Network* network, int* data_array, size_t data_array_length);

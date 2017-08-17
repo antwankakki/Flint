@@ -28,13 +28,13 @@ SC_CHECKS= \
 SC_ARGS=$(SC_CHECKS)
 SC_ENTRY_POINT_PATH=./debug.exe
 
-debug:
+debug: clean
 	$(CC) $(CXX_ARGS) -g -DDEBUG $(CXX_ENTRY_POINT_PATH) -o debug.exe
 
-release:
+release: clean
 	$(CC) $(CXX_ARGS) -DRELEASE $(CXX_ENTRY_POINT_PATH) -o release.exe
 
-production:
+production: clean
 	$(CC) $(CXX_ARGS) $(CXX_ENTRY_POINT_PATH) -o production.exe
 
 run:
