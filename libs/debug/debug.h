@@ -1,8 +1,8 @@
 #ifndef _DEBUG_
 #define _DEBUG_
 
-#include <stdio.h> //vprintf
-#include <stdarg.h> //va_list, va_start, va_end
+#include <stdio.h> // vprintf
+#include <stdarg.h> // va_list, va_start, va_end
 #include <stdlib.h>
 
 // Booleans

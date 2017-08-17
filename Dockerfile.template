@@ -3,8 +3,12 @@ FROM resin/%%RESIN_MACHINE_NAME%%-debian
 #switch on systemd init system in container
 ENV INITSYSTEM on
 
-chmod +x configure.sh
-./configure.sh
+RUN apt-get -yq update
+RUN apt-get install -yq --no-install-recommends build-essential
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/*
+
+RUN make configure
 
 COPY . /usr/src/app
 WORKDIR /usr/src/app
