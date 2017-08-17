@@ -32,6 +32,9 @@ That's it. You should now be able to see a 'Downloading' progress bar under your
   make run # or 'make analyze' to run the build against Valgrind for memory leak checks
 ```
 
+## Remote Control Specification
+TO BE ADDED
+
 ## Contributing
 Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PRs that break the build will be rejected.
 
