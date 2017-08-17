@@ -61,6 +61,8 @@ void debugPrint(LogType log_type, int flag, const char * format, ...)
 
 #define ENTRY_POINT debugPrint(INFO, __DEBUG__ || __RELEASE__, "Entered %s (%s: %d)", __FUNCTION__, __FILE__, __LINE__);
 #define EXIT_POINT debugPrint(INFO, __DEBUG__ || __RELEASE__, "Exited %s (%s: %d)", __FUNCTION__, __FILE__, __LINE__);
-#define EXIT_POINT_WITH_RETURN(x) EXIT_POINT; return x;
+#define EXIT_POINT_WITH_RETURN(x) \
+  EXIT_POINT; \
+  return x;
 
 #endif

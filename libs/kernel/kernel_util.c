@@ -27,6 +27,7 @@ int powerUp(Drone* drone)
 {
     ENTRY_POINT;
     UNUSED(drone);
+    debugPrint(INFO, __DEBUG__ || __RELEASE__, "Powering up the drone");
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -34,6 +35,7 @@ int powerDown(Drone* drone)
 {
     ENTRY_POINT;
     UNUSED(drone);
+    debugPrint(INFO, __DEBUG__ || __RELEASE__, "Powering down the drone");
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -41,6 +43,7 @@ int gracefulPowerDown(Drone* drone)
 {
     ENTRY_POINT;
     UNUSED(drone);
+    debugPrint(INFO, __DEBUG__ || __RELEASE__, "Gracefully powering down the drone");
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -48,6 +51,7 @@ int reboot(Drone* drone)
 {
     ENTRY_POINT;
     UNUSED(drone);
+    debugPrint(INFO, __DEBUG__ || __RELEASE__, "Rebooting the drone");
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -55,7 +59,7 @@ int setDroneSpeed(Drone* drone, float speed)
 {
     ENTRY_POINT;
     UNUSED(drone);
-    UNUSED(speed);
+    debugPrint(INFO, __DEBUG__ || __RELEASE__, "Setting drone speed to %.3f", speed);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -63,7 +67,7 @@ int setDroneHeight(Drone* drone, float height)
 {
     ENTRY_POINT;
     UNUSED(drone);
-    UNUSED(height);
+    debugPrint(INFO, __DEBUG__ || __RELEASE__, "Setting drone height to %.3f", height);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -71,7 +75,7 @@ int setDroneDirection(Drone *drone, int direction)
 {
     ENTRY_POINT;
     UNUSED(drone);
-    UNUSED(direction);
+    printf("Setting drone direction to %d", direction);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -79,7 +83,7 @@ int setDroneTilt(Drone* drone, float tilt)
 {
     ENTRY_POINT;
     UNUSED(drone);
-    UNUSED(tilt);
+    debugPrint(INFO, __DEBUG__ || __RELEASE__, "Setting drone tilt to %.3f", tilt);
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 

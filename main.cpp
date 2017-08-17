@@ -1,5 +1,10 @@
 #include "libs/application/application.c"
 
+typedef struct {
+  int a;
+  int b;
+} A;
+
 int main() {
     ENTRY_POINT;
 
@@ -11,7 +16,14 @@ int main() {
     }
 
     // Test
-    application.handle.showInventory(&application);
+    //application.handle.showInventory(&application);
+
+    A* a = {0};
+
+    a = (A*)calloc(1, sizeof(A));
+
+    SAFE_FREE(a);
+    SAFE_FREE(a);
 
     EXIT_POINT_WITH_RETURN(0);
 }
