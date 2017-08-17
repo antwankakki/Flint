@@ -29,7 +29,7 @@ That's it. You should now be able to see a 'Downloading' progress bar under your
   vagrant provision # install all that's necessary for the build to succeed
   vagrant ssh
   make # build a debug version of the code
-  make run # or make analyze to run the build against Valgrind for memory leak checks
+  make run # or 'make analyze' to run the build against Valgrind for memory leak checks
 ```
 
 ## Contributing
