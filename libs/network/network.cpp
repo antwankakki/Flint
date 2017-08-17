@@ -1,5 +1,5 @@
 #include "network.h"
-#include "network_util.c"
+#include "network_util.cpp"
 
 int networkInit(Network* network)
 {

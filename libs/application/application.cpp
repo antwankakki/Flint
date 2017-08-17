@@ -1,6 +1,6 @@
 #include <string.h> // needed for memset
 #include "application.h"
-#include "application_util.c"
+#include "application_util.cpp"
 
 int applicationInit(Application* application)
 {

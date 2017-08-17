@@ -1,5 +1,5 @@
 #include "kernel.h"
-#include "kernel_util.c"
+#include "kernel_util.cpp"
 
 int kernelInit(Drone* drone)
 {

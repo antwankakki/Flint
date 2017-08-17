@@ -2,8 +2,8 @@
 #define _APPLICATION_
 
 #include "../debug/debug.h"
-#include "../kernel/kernel.c"
-#include "../network/network.c"
+#include "../kernel/kernel.cpp"
+#include "../network/network.cpp"
 
 struct _Application;
 typedef struct _ApplicationHandle {

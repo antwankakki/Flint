@@ -1,4 +1,4 @@
-#include "libs/application/application.c"
+#include "libs/application/application.cpp"
 
 typedef struct {
   int a;
