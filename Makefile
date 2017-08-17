@@ -34,6 +34,9 @@ debug:
 release:
 	$(CC) $(CXX_ARGS) -DRELEASE $(CXX_ENTRY_POINT_PATH) -o release.exe
 
+production:
+	$(CC) $(CXX_ARGS) $(CXX_ENTRY_POINT_PATH) -o production.exe
+
 run:
 	./`ls -t *.exe | head -n 1 | awk '{print $1}'`
 
