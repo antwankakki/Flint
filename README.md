@@ -33,7 +33,7 @@ That's it. You should now be able to see a 'Downloading' progress bar under your
 ```
 
 ## Contributing
-Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PR that breaks the build won't get approved.
+Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PRs that break the build will be rejected.
 
 # Author
 [Fadi Hanna Al-Kass](https://github.com/alkass)
