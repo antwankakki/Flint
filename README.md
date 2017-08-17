@@ -36,7 +36,11 @@ That's it. You should now be able to see a 'Downloading' progress bar under your
 TO BE ADDED
 
 ## Contributing
-Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PRs that break the build will be rejected.
+* Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PRs that break the build will be rejected.
+
+* When submitting a PR, clearly explain what has been done.
+
+* Do NOT directly modify makefile, configure.sh, .travis.yml, Dockerfile.template, or Vagrantfile. If, for some reason, you need to introduce additions or changes to any of these files, start a GitHub issue.
 
 # Author
 [Fadi Hanna Al-Kass](https://github.com/alkass)
