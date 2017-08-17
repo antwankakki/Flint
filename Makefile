@@ -1,5 +1,5 @@
-CC=g++
-CC_CHECKS= \
+CXX=g++
+CXX_CHECKS= \
 	-Wall \
 	-Werror \
 	-Wclobbered \
@@ -10,11 +10,11 @@ CC_CHECKS= \
 	-Wuninitialized \
 	-Wunused-parameter \
 	-Wunused-but-set-parameter
-CC_FEATURE_SET=-std=c++0x
-CC_ARGS= \
-	$(CC_CHECKS) \
-	$(CC_FEATURE_SET)
-CC_ENTRY_POINT_PATH=./main.cpp
+CXX_FEATURE_SET=-std=c++0x
+CXX_ARGS= \
+	$(CXX_CHECKS) \
+	$(CXX_FEATURE_SET)
+CXX_ENTRY_POINT_PATH=./main.cpp
 
 SC_ANALYZER=valgrind
 SC_CHECKS= \
@@ -29,10 +29,10 @@ SC_ARGS=$(SC_CHECKS)
 SC_ENTRY_POINT_PATH=./debug.exe
 
 debug:
-	$(CC) $(CC_ARGS) -g -DDEBUG $(CC_ENTRY_POINT_PATH) -o debug.exe
+	$(CC) $(CXX_ARGS) -g -DDEBUG $(CXX_ENTRY_POINT_PATH) -o debug.exe
 
 release:
-	$(CC) $(CC_ARGS) -DRELEASE $(CC_ENTRY_POINT_PATH) -o release.exe
+	$(CC) $(CXX_ARGS) -DRELEASE $(CXX_ENTRY_POINT_PATH) -o release.exe
 
 run:
 	./`ls -t *.exe | head -n 1 | awk '{print $1}'`
