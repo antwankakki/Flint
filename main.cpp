@@ -1,10 +1,5 @@
 #include "libs/application/application.cpp"
 
-typedef struct {
-  int a;
-  int b;
-} A;
-
 int main() {
     ENTRY_POINT;
 
