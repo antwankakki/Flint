@@ -10,7 +10,7 @@ CC_CHECKS= \
 	-Wuninitialized \
 	-Wunused-parameter \
 	-Wunused-but-set-parameter
-CC_FEATURE_SET=-std=c++11
+CC_FEATURE_SET=-std=c++0x
 CC_ARGS= \
 	$(CC_CHECKS) \
 	$(CC_FEATURE_SET)
