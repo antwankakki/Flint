@@ -25,12 +25,37 @@ That's it. You should now be able to see a 'Downloading' progress bar under your
 
 ## Building the Source Code
 ```shell
+  # Check out the code repository
   git clone https://github.com/alkass/Flint.git && cd Flint
-  vagrant up # only once per repository check out
-  vagrant provision # install all that's necessary for the build to succeed
+  
+  # Bring the Vagrant box up
+  # You only need to run this operation once per check out
+  vagrant up
+  
+  # Install all that's necessary for the build to succeed
+  # Technically, you only need to run this once, but wouldn't 
+  # hurt to run it every couple of days as provisioning may change
+  # from release to release
+  # Also, consider running this if the following command fails and you
+  # haven't provisioned the box in a while
+  vagrant provision
+  
+  # Connect to your box over SSH
   vagrant ssh
-  make # build a debug version of the code
-  make run # or 'make analyze' to run the build against Valgrind for memory leak checks
+  
+  # Build a debug version of the code
+  # You may also run `make release` or `run production` if you're not
+  # interested in seeing all that hairy debugging info
+  # `make release` weeds out most of the low-level debug info
+  # `make production` weeds out all debug logs
+  make
+  
+  # This command runs your last build (anything generated from
+  # `make debug`, `run release` or `run production`).
+  # If you've run `make debug` from the previous step, you can run
+  # `make analyze` to test the build against Valgrind and find all
+  # possible memory leaks in the code
+  make run
 ```
 
 ## Remote Control Specification
