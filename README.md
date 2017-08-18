@@ -32,7 +32,7 @@ git remote add resin <username>@git.resin.io:<username>/<app name>.git
   git clone https://github.com/alkass/Flint.git && cd Flint
   
   # Skip this step if you already have vagrant installed on your machine
-  make configure
+  chmod +x configure.sh && sudo ./configure.sh
   
   # Bring the Vagrant box up
   # You only need to run this operation once per check out
