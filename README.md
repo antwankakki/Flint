@@ -12,16 +12,19 @@ There you have the story. Interested? Consider contributing. The project is fair
 
 # Getting Started
 ## Deploying to the Pi
-1. Create an application on [resin.io](https://resin.io) and download RESINOS to your board. Instructions are available [here](https://docs.resin.io/raspberrypi3/cpp/getting-started/) if you've never done this before.
-2. Check out this repository:
 ```shell
-  git clone https://github.com/alkass/Flint.git && cd Flint
+# Create an application on [resin.io](https://resin.io) and download RESINOS
+# to your board. Instructions are available at https://docs.resin.io/raspberrypi3/cpp/getting-started/
+# if you've never done this before
+
+# Check out the repository
+git clone https://github.com/alkass/Flint.git && cd Flint
+
+#  Add the application's Git remote endpoint to the repository
+git remote add resin <username>@git.resin.io:<username>/<app name>.git
+
+# That's it. You should now be able to see a 'Downloading' progress bar under your application.
 ```
-3. Add the application's Git remote endpoint to the repo:
-```shell
-  git remote add resin <username>@git.resin.io:<username>/<app name>.git
-```
-That's it. You should now be able to see a 'Downloading' progress bar under your application.
 
 ## Building the Source Code
 ```shell
