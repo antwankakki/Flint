@@ -2,7 +2,6 @@
 
 int main() {
     ENTRY_POINT;
-
     Application application;
     if (!applicationInit(&application))
     {

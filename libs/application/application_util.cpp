@@ -58,11 +58,8 @@ int populateApplication(Application* application)
     if (kernelInit(&application->drone) && networkInit(&application->network) && populateApplicationHandle(application))
     {
         application->status = READY;
+        EXIT_POINT_WITH_RETURN(TRUE);
     }
-    else
-    {
-        application->status = DOWN;
-        EXIT_POINT_WITH_RETURN(FALSE);
-    }
-    EXIT_POINT_WITH_RETURN(TRUE);
+    application->status = DOWN;
+    EXIT_POINT_WITH_RETURN(FALSE);
 }
