@@ -11,7 +11,7 @@ We realize that the drone market is still living its infancy days, which means t
 There you have the story. Interested? Consider contributing. The project is fairly new and we're sure we can squeeze you in somewhere and suck the life out of you. Just make sure you conform to our coding standards <b>which are yet to be added</b>, and you're good to go.
 
 # Getting Started
-## Deploying to the Pi
+## Deploying the Firmware to the Pi
 ```shell
 # Create an application on [resin.io](https://resin.io) and download RESINOS
 # to your board. Instructions are available at https://docs.resin.io/raspberrypi3/cpp/getting-started/
