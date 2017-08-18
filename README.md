@@ -62,7 +62,13 @@ git remote add resin <username>@git.resin.io:<username>/<app name>.git
 ```
 
 ## Remote Control Specification
-TO BE ADDED
+The Remote Control Specification allows you to control the drone over various TCP-based protocols. This specification is designed to allow high-level control (Drone takeoff/landing, movement, height, direction, speed, camera streaming, capturing scenes, battery status retrieval, etc) as well as low-level control (rotor thrust, GSP, etc).
+
+We'll assume a pure TCP connection is established between the drone and your controller for the sake of simplicity, but this specification should work across all supported connections with little or no changes.
+
+All commands sent to the drone consist of a list of 10 integer values. How the values are constructed and organized is discussed as you read further down.
+
+TBC
 
 ## Contributing
 * Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PRs that break the build will be rejected.
