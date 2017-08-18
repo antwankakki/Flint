@@ -25,6 +25,7 @@ That's it. You should now be able to see a 'Downloading' progress bar under your
 
 ## Building the Source Code
 ```shell
+  git clone https://github.com/alkass/Flint.git && cd Flint
   vagrant up # only once per repository check out
   vagrant provision # install all that's necessary for the build to succeed
   vagrant ssh
