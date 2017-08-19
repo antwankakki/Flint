@@ -22,11 +22,13 @@ CXX_ENTRY_POINT_PATH=./main.cpp
 SC_ANALYZER=valgrind
 SC_CHECKS= \
 	--tool=memcheck \
+	--error-limit=no \
 	--leak-check=yes \
 	--show-reachable=yes \
 	--num-callers=20 \
 	--track-fds=yes \
 	--track-origins=yes \
+	--keep-stacktraces=alloc-and-free \
 	-v
 SC_ARGS=$(SC_CHECKS)
 SC_ENTRY_POINT_PATH=./debug.exe
