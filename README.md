@@ -80,5 +80,7 @@ TBC
 
 * Do NOT directly modify makefile, configure.sh, .travis.yml, Dockerfile.template, or Vagrantfile. If, for some reason, you need to introduce additions or changes to any of these files, start a GitHub issue.
 
+* No dynamically loaded libraries.
+
 # Author
 [Fadi Hanna Al-Kass](https://github.com/alkass)
