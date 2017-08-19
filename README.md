@@ -82,5 +82,8 @@ TBC
 
 * No dynamically loaded libraries.
 
-# Author
+# Authors & Contributors
+## Authors
 [Fadi Hanna Al-Kass](https://github.com/alkass)
+
+## Contributors
