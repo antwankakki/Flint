@@ -69,7 +69,7 @@ The Remote Control Specification allows you to control the drone over various TC
 
 We'll assume a pure TCP connection is established between the drone and your controller for the sake of simplicity, but this specification should work across all supported connections with little or no changes.
 
-All commands sent to the drone consist of a list of 10 integer values. How the values are constructed and organized is discussed as you read further down.
+All commands sent to the drone consist of a list of 10 integer values. How the values are constructed and organized is discussed as you read along.
 
 TBC
 
