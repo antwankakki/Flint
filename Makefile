@@ -41,6 +41,9 @@ release: clean
 production: clean
 	$(CC) $(CXX_ARGS) $(CXX_ENTRY_POINT_PATH) -o production.exe
 
+deploy:
+	git push resin master
+
 run:
 	./`ls -t *.exe | head -n 1 | awk '{print $1}'`
 

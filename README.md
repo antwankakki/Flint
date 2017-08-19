@@ -23,6 +23,9 @@ git clone https://github.com/alkass/Flint.git && cd Flint
 #  Add the application's Git remote endpoint to the repository
 git remote add resin <username>@git.resin.io:<username>/<app name>.git
 
+# Deploy the source code onto your Pi
+make deploy
+
 # That's it. You should now be able to see a 'Downloading' progress bar under your application.
 ```
 
