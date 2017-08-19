@@ -36,6 +36,9 @@ make deploy
   git clone https://github.com/alkass/Flint.git && cd Flint
 
   # Install all that's necessary for the build to succeed
+  # If, for whatever reason, make is not installed on your Linux machine,
+  # run the following command instead:
+  # $ chmod +x configure.sh && sudo ./configure.sh
   make configure
   
   # Build a debug version of the code
