@@ -42,11 +42,16 @@ int showInventory(const Application* application)
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
+///
+// Actual entry point to the firmware
+///
 int start(Application* application)
 {
   ENTRY_POINT;
   UNUSED(application);
-  // actual entry point to the firmware
+  debugPrint(INFO, TRUE, "Starting application");
+  int data[DEFAULT_COMMAND_LENGTH];
+  application->network.handle.readBytes(&application->network, data, DEFAULT_COMMAND_LENGTH); // TODO: delete this
   EXIT_POINT_WITH_RETURN(TRUE);
 }
 

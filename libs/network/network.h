@@ -4,7 +4,7 @@
 #include "../debug/debug.h"
 
 #define ACKNOWLEDGMENT_SET     0xABCDEF
-#define DEFAULT_COMMAND_LENGTH 10
+#define DEFAULT_COMMAND_LENGTH (size_t)10
 
 typedef struct {
   int action;

@@ -10,17 +10,17 @@
 #define FALSE (0 == 1)
 
 #ifdef DEBUG
-    #define __DEBUG__ TRUE
+    #define __DEBUG__   TRUE
     #define __RELEASE__ FALSE
 #endif
 #ifdef RELEASE
-    #define __DEBUG__ FALSE
+    #define __DEBUG__   FALSE
     #define __RELEASE__ TRUE
 #endif
 #ifndef DEBUG
   #ifndef RELEASE
-    // if compiled with neither -DDEBUG nor -DRELEASE
-    #define __DEBUG__ FALSE
+    // If compiled with neither -DDEBUG nor -DRELEASE
+    #define __DEBUG__   FALSE
     #define __RELEASE__ FALSE
   #endif
 #endif

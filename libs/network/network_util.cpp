@@ -2,7 +2,7 @@ int readBytes(_Network* network, int* data_array, size_t data_array_length)
 {
   ENTRY_POINT;
   UNUSED(network);
-  UNUSED(data_array);
+  memset(data_array, 0, data_array_length * sizeof(int));
   debugPrint(INFO, __DEBUG__ || __RELEASE__, "Reading %d byte(s)", data_array_length);
   EXIT_POINT_WITH_RETURN(TRUE);
 }
