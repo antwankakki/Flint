@@ -7,7 +7,7 @@
 // pass it to UNUSED() which will let the compiler know that you're aware of this
 // warning and would like to silence it.
 #define UNUSED(x) \
-  debugPrint(INFO, __DEBUG__ || __RELEASE__, "Unused parameter (%s) found in %s", #x, __FUNCTION__); \
+  debugPrint(INFO, __DEBUG__ || __RELEASE__, "Unused parameter (%s) found at %s:%d", #x, __FUNCTION__, __LINE__); \
   (void)x;
 
 // Double freeing leads to segmentation faluts. This can be extremely dangerous
