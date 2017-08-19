@@ -10,6 +10,7 @@ typedef struct _ApplicationHandle {
     Status status;
     int (*populateApplication)(_Application* application);
     int (*showInventory)(const _Application* application);
+    int (*start)(_Application* application);
 } ApplicationHandle;
 
 typedef struct _Application {

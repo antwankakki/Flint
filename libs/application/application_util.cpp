@@ -42,11 +42,19 @@ int showInventory(const Application* application)
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
+int start(Application* application)
+{
+  ENTRY_POINT;
+  UNUSED(application);
+  // actual entry point to the firmware
+  EXIT_POINT_WITH_RETURN(TRUE);
+}
+
 int populateApplicationHandle(Application* application)
 {
     ENTRY_POINT;
     application->handle.showInventory = showInventory;
-    // TODO: add all handles
+    application->handle.start = start;
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 
