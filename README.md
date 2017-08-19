@@ -30,32 +30,32 @@ git remote add resin <username>@git.resin.io:<username>/<app name>.git
 ```shell
   # Check out the code repository
   git clone https://github.com/alkass/Flint.git && cd Flint
-  
+
   # Skip this step if you already have vagrant installed on your machine
   chmod +x configure.sh && sudo ./configure.sh
-  
+
   # Bring the Vagrant box up
   # You only need to run this operation once per check out
   vagrant up
-  
+
   # Install all that's necessary for the build to succeed
-  # Technically, you only need to run this once, but wouldn't 
+  # Technically, you only need to run this once, but wouldn't
   # hurt to run it every couple of days as provisioning may change
   # from release to release
   # Also, consider running this if the following command fails and you
   # haven't provisioned the box in a while
   vagrant provision
-  
+
   # Connect to your box over SSH
   vagrant ssh
-  
+
   # Build a debug version of the code
   # You may also run `make release` or `run production` if you're not
   # interested in seeing all that hairy debugging info
   # `make release` weeds out most of the low-level debug info
   # `make production` weeds out all debug logs
   make
-  
+
   # This command runs your last build (anything generated from
   # `make debug`, `run release` or `run production`).
   # If you've run `make debug` from the previous step, you can run
@@ -65,7 +65,7 @@ git remote add resin <username>@git.resin.io:<username>/<app name>.git
 ```
 
 ## Remote Control Specification
-The Remote Control Specification allows you to control the drone over various TCP-based protocols. This specification is designed to allow high-level control (Drone takeoff/landing, movement, height, direction, speed, camera streaming, capturing scenes, battery status retrieval, etc) as well as low-level control (rotor thrust, GSP, etc) when properly connected.
+The Remote Control Specification allows you to control the drone over various TCP-based protocols. This specification is designed to allow high-level control (Drone takeoff/landing, movement, height, direction, speed, camera streaming, capturing scenes, battery status retrieval, etc) as well as low-level control (rotor thrust, GPS, etc) when properly connected.
 
 We'll assume a pure TCP connection is established between the drone and your controller for the sake of simplicity, but this specification should work across all supported connections with little or no changes.
 
