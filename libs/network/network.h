@@ -3,8 +3,8 @@
 
 #include "../debug/debug.h"
 
-#define ACKNOWLEDGMENT 0xABCDEF
-#define TYPICAL_COMMAND_LENGTH 10
+#define ACKNOWLEDGMENT_SET     0xABCDEF
+#define DEFAULT_COMMAND_LENGTH 10
 
 typedef struct {
   int action;
@@ -12,8 +12,8 @@ typedef struct {
 } Action;
 
 typedef struct {
-  int acknowledgment;
-  int device;
+  int acknowledgment; // ACKNOWLEDGMENT_SET
+  int device_id;
   Action action;
 } Command;
 
