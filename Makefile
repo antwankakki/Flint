@@ -1,3 +1,6 @@
+# @Note: Do NOT modify this file on your own
+# @Author: Fadi Hanna Al-Kass
+
 CXX=g++
 CXX_CHECKS= \
 	-Wall \
