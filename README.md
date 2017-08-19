@@ -69,9 +69,27 @@ The Remote Control Specification allows you to control the drone over various TC
 
 We'll assume a pure TCP connection is established between the drone and your controller for the sake of simplicity, but this specification should work across all supported connections with little or no changes.
 
+We'll use `arg:len` to represent arguments. The number following the colon (`:`) represents the number of arguments, e.g., to represent a list of one acknowledge integer followed by a device id followed by 8 parameters, we will use the following notation:
+
+```
+  acknowledge:1 device_id:1 parameters:8
+```
+
 All commands sent to the drone consist of a list of 10 integer values. How the values are constructed and organized is discussed as you read along.
 
+All commands sent to the drone will have to take the following form:
+
+```
+  acknowledge:1 device_id:1 parameters:8
+```
+
+For a command to be considered valid, it would have to start with an acknowledgement integer. This integer is consensual and we've already defined it in [network.h](https://github.com/Alkass/Flint/blob/master/libs/network/network.h) as `0xABCDEF`.
+
+`device_id` is a unique number assigned to every hardware and every software component in `Flint`. Guessing the number is pretty straightforward.
+
 TBC
+
+`parameters` will change from command to command.
 
 ## Contributing
 * Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PRs that break the build will be rejected.
