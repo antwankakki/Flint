@@ -16,5 +16,5 @@ RUN rm -rf /var/lib/apt/lists/*
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
-RUN make release
-CMD make run
+RUN make debug
+CMD make analyze
