@@ -28,7 +28,6 @@ SC_CHECKS= \
 	--num-callers=20 \
 	--track-fds=yes \
 	--track-origins=yes \
-	--keep-stacktraces=alloc-and-free \
 	-v
 SC_ARGS=$(SC_CHECKS)
 SC_ENTRY_POINT_PATH=./debug.exe
