@@ -31,6 +31,9 @@ SC_CHECKS= \
 	-v
 SC_ARGS=$(SC_CHECKS)
 SC_ENTRY_POINT_PATH=./debug.exe
+VC=git
+VC_ARGS=push
+VC_PARAMS=resin master
 
 debug: clean
 	$(CC) $(CXX_ARGS) -g -DDEBUG $(CXX_ENTRY_POINT_PATH) -o debug.exe
@@ -42,7 +45,7 @@ production: clean
 	$(CC) $(CXX_ARGS) $(CXX_ENTRY_POINT_PATH) -o production.exe
 
 deploy:
-	git push resin master
+	$(VC) $(VC_ARGS) $(VC_PARAMS)
 
 run:
 	./`ls -t *.exe | head -n 1 | awk '{print $1}'`
