@@ -11,5 +11,8 @@ int main() {
 
     // Test
     application.handle.showInventory(&application);
+
+    UNUSED(application);
+
     EXIT_POINT_WITH_RETURN(0);
 }
