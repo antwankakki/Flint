@@ -30,6 +30,30 @@ make deploy
 ```
 
 ## Building the Source Code
+### Building on Linux
+```shell
+# Check out the code repository
+  git clone https://github.com/alkass/Flint.git && cd Flint
+
+  # Install all that's necessary for the build to succeed
+  make configure
+  
+  # Build a debug version of the code
+  # You may also run `make release` or `run production` if you're not
+  # interested in seeing all that hairy debugging info
+  # `make release` weeds out most of the low-level debug info
+  # `make production` weeds out all debug logs
+  make
+
+  # This command runs your last build (anything generated from
+  # `make debug`, `run release` or `run production`).
+  # If you've run `make debug` from the previous step, you can run
+  # `make analyze` to test the build against Valgrind and find all
+  # possible memory leaks in the code
+  make run
+```
+
+### Building on Other Platforms
 ```shell
   # Check out the code repository
   git clone https://github.com/alkass/Flint.git && cd Flint
