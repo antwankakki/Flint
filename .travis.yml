@@ -2,6 +2,7 @@
 # @Author: Fadi Hanna Al-Kass
 
 sudo: required
+dist: precise
 before_install:
   - sudo make configure
 language: cpp
