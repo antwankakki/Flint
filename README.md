@@ -112,12 +112,14 @@ All commands sent to the drone consist of a list of 10 integer values. How the v
 All commands sent to the drone will have to take the following form:
 
 ```
-  acknowledge:1 device_id:1 parameters:8
+  acknowledge:1 target:1 target_id: parameters:8
 ```
 
 For a command to be considered valid, it would have to start with an acknowledgement integer. This integer is consensual and we've already defined it in [network.h](https://github.com/Alkass/Flint/blob/master/libs/network/network.h) as `0xABCDEF`.
 
-`device_id` is a unique number assigned to every hardware and every software component in `Flint`. Guessing the number is pretty straightforward.
+`target` is any hardware or software component that's accessable to the remote controller (Application, Drone, Battery, GPS, Rotors, Sensors, etc).
+
+`target_id` is a unique number assigned to every hardware and every software component in `Flint`. Guessing the number is pretty straightforward. `target_id` is assigned to the components in an ascending order and follows one simple rule, that is the first component of the specified type get target_id #1, second gets #2, third gets #3 and so on. So, since we only have one application, the application `target_id` is always going to be 1. Same thing applies to the drone and battery components (unless your drone has a backup battery which will get #2 but that's not supported by the firmware yet), rotors are 4 so they get #1, #2, #3, and #4. You get the point.
 
 TBC
 
