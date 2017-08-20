@@ -50,8 +50,26 @@ int start(Application* application)
   ENTRY_POINT;
   UNUSED(application);
   debugPrint(INFO, TRUE, "Starting application");
-  int data[DEFAULT_COMMAND_LENGTH];
-  application->network.handle.readBytes(&application->network, data, DEFAULT_COMMAND_LENGTH); // TODO: delete this
+  Command command;
+  while (application->network.handle.readBytes(&application->network, (int*)&command, DEFAULT_COMMAND_LENGTH))
+  {
+    if (command.acknowledgment == ACKNOWLEDGMENT_SET)
+    {
+      // TODO: process command
+    }
+    else
+    {
+      debugPrint(INFO, TRUE, "Recieved invalid command (acknowledgment not set properly)");
+    }
+  }
+  application->handle.startAutoPilot(application);
+  EXIT_POINT_WITH_RETURN(TRUE);
+}
+
+int startAutoPilot(Application* application)
+{
+  ENTRY_POINT;
+  UNUSED(application);
   EXIT_POINT_WITH_RETURN(TRUE);
 }
 
@@ -60,6 +78,7 @@ int populateApplicationHandle(Application* application)
     ENTRY_POINT;
     application->handle.showInventory = showInventory;
     application->handle.start = start;
+    application->handle.startAutoPilot = startAutoPilot;
     EXIT_POINT_WITH_RETURN(TRUE);
 }
 

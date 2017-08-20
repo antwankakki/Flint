@@ -11,6 +11,7 @@ typedef struct _ApplicationHandle {
     int (*populateApplication)(_Application* application);
     int (*showInventory)(const _Application* application);
     int (*start)(_Application* application);
+    int (*startAutoPilot)(_Application* application);
 } ApplicationHandle;
 
 typedef struct _Application {
