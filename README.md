@@ -126,6 +126,8 @@ TBC
 `parameters` will change from command to command.
 
 ## Contributing
+Have time to invest? Sure! we have tasks to implement.
+
 * Submit your contributions as pull requests. Make sure you have run `make && make analyze` prior to submitting your PR. contributions with leaks will break the build. PRs that break the build will be rejected.
 
 * When submitting a PR, clearly explain what has been done.
