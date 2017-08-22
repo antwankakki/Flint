@@ -97,7 +97,7 @@ make deploy
 ## Remote Control Specification
 The Remote Control Specification allows you to control the drone over various TCP-based protocols. This specification is designed to allow high-level control (Drone takeoff/landing, movement, height, direction, speed, camera streaming, capturing scenes, battery status retrieval, etc) as well as low-level control (rotor thrust, GPS, etc) when properly connected.
 
-We'll assume a pure TCP connection is established between the drone and your controller for the sake of simplicity, but this specification should work across all supported connections with little or no changes.
+We'll assume a pure TCP connection is established between the drone and your controller for the sake of simplicity, but this specification should work across all supported connections with little or no change.
 
 We'll use `arg:len` to represent arguments. The number following the colon (`:`) represents the number of arguments, e.g., the following notation represents a list of a single argument followed by two argument followed by 7 arguments:
 
