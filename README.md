@@ -1,5 +1,12 @@
 [![Build Status](https://travis-ci.com/Alkass/Flint.svg?token=5HdMqhthhyUjijBZQvCS&branch=master)](https://travis-ci.com/Alkass/Flint)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AlKass/polish/blob/master/License.md)
+
+
+<div align="center">
+  <img src="logo.png">
+</div>
+
 # Flint
 Flint is a drone firmware designed with hackability and extensibility in mind.
 
@@ -40,7 +47,7 @@ make deploy
   # run the following command instead:
   # $ chmod +x configure.sh && sudo ./configure.sh
   make configure
-  
+
   # Build a debug version of the code
   # You may also run `make release` or `run production` if you're not
   # interested in seeing all that hairy debugging info
