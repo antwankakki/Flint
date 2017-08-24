@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Alkass/Flint.svg?token=5HdMqhthhyUjijBZQvCS&branch=master)](https://travis-ci.com/Alkass/Flint)
+[![Build Status](https://travis-ci.org/FlintFirmware/Flint.svg?branch=master)](https://travis-ci.org/FlintFirmware/Flint)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/AlKass/polish/blob/master/License.md)
 
 
