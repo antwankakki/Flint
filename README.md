@@ -9,12 +9,12 @@
 # Flint
 Flint is a drone firmware designed with hackability and extensibility in mind.
 
-# Story Behind this Creation
+# Background
 Most drone firmwares come with proprietary communication protocols and no SDK. We've had our course with poking holes into existing firmwares and thought there has to be an easier way to control a drone from the comfort of one's computer. Unfortunately, it turns out there hasn't, so we decided to invent a firmware from the ground up with hackability in mind.
 
 We realize that the drone market is still living its infancy days, which means things will get added and others will change. So, we decided to have an architecture that's adaptive to addition and change.
 
-There you have the story. Interested? Consider contributing. The project is fairly new and we're sure we can squeeze you in somewhere and suck the life out of you. Just make sure you conform to our coding standards <b>which can be fould down below at the Contributing section</b>, and you're good to go.
+There you have the story. Interested? Consider contributing. The project is fairly new and we're sure we can squeeze you in somewhere and suck the life out of you. Just make sure you conform to our coding standards <b>which can be found down below at the Contributing section</b>, and you're good to go.
 
 # Getting Started
 ## Deploying the Firmware to the Pi
