@@ -1,3 +1,7 @@
+#The whole build and tags directory
+/build
+tags
+
 # Prerequisites
 *.d
 
@@ -36,3 +40,9 @@
 
 # Vagrant related Files and Directories
 .vagrant
+
+#Mac finder
+.DS_Store
+
+#VSCode
+.vscode/
